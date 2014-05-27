@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="gamik" host="localhost" user="root" password="">
+    <table name="group">
+        <column name="idGroup"/>
+        <column name="groupName" unique="true"/>
+    </table>
+    <table name="user" description="">
+        <column name="idUser"/>
+        <column name="login" unique="true"/>
+        <column name="password"/>
+        <column name="title"/>
+        <column name="name"/>
+        <column name="surname"/>
+        <column name="email"/>
+        <column name="createCourse"/>
+    </table>
+    <table name="scores" description="">
+        <column name="idScores"/>
+        <column name="points" />
+        <column name="awards" />
+        <column name="achieve" />
+        <column name="userId" />
+        <column name="groupCourseId" />
+    </table>
+    <table name="lesson" description="">
+        <column name="idLesson"/>
+        <column name="nr" />
+        <column name="filePath" />
+        <column name="date" />
+        <column name="courseId" />
+    </table>
+    <table name="groupusers" description="">
+        <column name="idGroupUsers"/>
+        <column name="userId" />
+        <column name="groupId" />
+    </table>
+    <table name="grouplecturer" description="">
+        <column name="idGroupLecturer"/>
+        <column name="roleId" />
+        <column name="userId" />
+    </table>
+    <table name="groupcourse" description="">
+        <column name="idGroupCourse"/>
+        <column name="dataStart" />
+        <column name="dataStop" />
+        <column name="groupLecturerId" />
+        <column name="courseId" />
+        <column name="groupId" />
+    </table>
+    <table name="course" description="">
+        <column name="idCourse"/>
+        <column name="description" />
+        <column name="folderPath" />
+        <column name="templatePath" />
+    </table>
+    <table name="content" description="">
+        <column name="idContent"/>
+        <column name="content" />
+        <column name="langId" />
+    </table>
+</database>
